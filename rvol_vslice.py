@@ -60,6 +60,8 @@ def compute_rvol_simple(df: pd.DataFrame, days: int = DAYS) -> pd.DataFrame:
 
     return out
 
+compute_rvol = compute_rvol_simple  # alias for tests
+
 def main():
     df = load_csv("sample_intraday.csv")
     df = add_session_and_index(df)
